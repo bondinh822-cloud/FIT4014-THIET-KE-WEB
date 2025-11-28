@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch vụ nha khoa cao cấp - Niềng răng, Implant, Tẩy trắng răng, Bọc răng sứ với công nghệ hiện đại">
+    <title>Luxury Định Bon - Dịch vụ Nha Khoa Cao Cấp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600,700&family=Inter:wght@300,400,500,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0A1A2F 0%, #1a3a5c 100%);
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+        }
+        
+        .hero {
+            margin-top: 140px;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0A1A2F;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .service-icon span {
+            font-size: 64px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #0A1A2F;
+            margin-bottom: 15px;
+        }
+        
+        .service-content p {
+            color: #5a6c7d;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .service-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .service-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-details li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #5a6c7d;
+        }
+        
+        .service-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .video-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .video-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #0A1A2F;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .video-box {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+        
+        .cta-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+        
+        footer {
+            background: #0A1A2F;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-content {
+                padding: 20px;
+            }
+            
+            .cta-section h3 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>✨ Luxury ĐỊNH Bon ✨</h1>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="services.html">Dịch vụ</a>
+            <a href="care.html">Chăm sóc</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Nụ Cười Rạng Rỡ - Tự Tin Tỏa Sáng</h2>
+        <p>Dịch vụ nha khoa cao cấp với công nghệ hiện đại và đội ngũ bác sĩ chuyên môn cao</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Dịch Vụ Nha Khoa Chuyên Nghiệp</h2>
+        
+        <div class="services-grid">
+            <!-- Nhổ răng khôn -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>🦷</span>
+                </div>
+                <div class="service-content">
+                    <h3>Nhổ Răng Khôn</h3>
+                    <p>Quy trình nhổ răng khôn an toàn, vô trùng với công nghệ giảm đau tối đa. Bác sĩ giàu kinh nghiệm thực hiện nhanh chóng.</p>
+                    <div class="price-tag">800.000đ - 2.000.000đ</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Thời gian: 15-25 phút</li>
+                            <li>Gây tê cục bộ an toàn</li>
+                            <li>Theo dõi sau nhổ 7 ngày</li>
+                            <li>Tư vấn chăm sóc miễn phí</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Niềng răng -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>😁</span>
+                </div>
+                <div class="service-content">
+                    <h3>Niềng Răng Thẩm Mỹ</h3>
+                    <p>Điều chỉnh khớp cắn, cải thiện nụ cười với công nghệ niềng răng hiện đại. Nhiều lựa chọn phù hợp từng nhu cầu.</p>
+                    <div class="service-details">
+                        <ul>
+                            <li><strong>Mắc cài kim loại:</strong> 25-30 triệu</li>
+                            <li><strong>Mắc cài sứ:</strong> 32-38 triệu</li>
+                            <li><strong>Invisalign trong suốt:</strong> 70-120 triệu</li>
+                            <li>Thời gian: 12-24 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tẩy trắng răng -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>✨</span>
+                </div>
+                <div class="service-content">
+                    <h3>Tẩy Trắng Răng Laser</h3>
+                    <p>Công nghệ Laser Whitening thế hệ mới giúp răng trắng sáng ngay sau 1 buổi. An toàn cho men răng, không gây ê buốt.</p>
+                    <div class="price-tag">1.200.000đ - 2.000.000đ</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Trắng sáng tức thì 5-8 tông</li>
+                            <li>Thời gian: 60-90 phút</li>
+                            <li>Hiệu quả duy trì 1-2 năm</li>
+                            <li>Bảo hành 6 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cấy ghép Implant -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>🔬</span>
+                </div>
+                <div class="service-content">
+                    <h3>Cấy Ghép Implant</h3>
+                    <p>Trồng răng Implant công nghệ Hàn Quốc, Mỹ với độ bền cao. Giải pháp vĩnh viễn cho răng mất, giống răng thật nhất.</p>
+                    <div class="price-tag">15 triệu - 40 triệu/răng</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Implant Hàn Quốc: 15-22 triệu</li>
+                            <li>Implant Mỹ: 28-40 triệu</li>
+                            <li>Bảo hành trọn đời trụ Implant</li>
+                            <li>Không ảnh hưởng răng bên cạnh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bọc răng sứ -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>👑</span>
+                </div>
+                <div class="service-content">
+                    <h3>Bọc Răng Sứ Cao Cấp</h3>
+                    <p>Răng sứ thẩm mỹ Veneer siêu mỏng, tự nhiên như răng thật. Cải thiện màu sắc, hình dạng răng hoàn hảo.</p>
+                    <div class="service-details">
+                        <ul>
+                            <li><strong>Sứ Titan:</strong> 2-3 triệu/răng</li>
+                            <li><strong>Sứ Zirconia:</strong> 5-7 triệu/răng</li>
+                            <li><strong>Veneer siêu mỏng:</strong> 8-15 triệu/răng</li>
+                            <li>Bảo hành 10-15 năm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Điều trị tủy -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <span>💉</span>
+                </div>
+                <div class="service-content">
+                    <h3>Điều Trị Tủy (Nội Nha)</h3>
+                    <p>Điều trị tủy răng với kính hiển vi, công nghệ hiện đại. Giữ răng thật tối đa, giảm đau hiệu quả.</p>
+                    <div class="price-tag">800.000đ - 3.500.000đ</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Sử dụng kính hiển vi nha khoa</li>
+                            <li>Không đau trong suốt quá trình</li>
+                            <li>Bảo tồn răng thật tối đa</li>
+                            <li>Tái khám miễn phí 3 lần</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video hướng dẫn -->
+        <div class="video-section">
+            <h4>📹 Video Hướng Dẫn Quy Trình</h4>
+            <div class="video-grid">
+                <div class="video-box">
+                    <iframe 
+                        src="https://www.youtube.com/watch?si=14dm5Mw8FwFINIF5&v=ZdyrRsEg9VE&feature=youtu.be"
+                        src=""
+                        title="Quy trình nhổ răng khôn"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ng2T2p1C2ZI"
+                        title="Hướng dẫn niềng răng"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Hb3bT0WwEuk"
+                        title="Video tẩy trắng răng"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h3>Sẵn Sàng Cho Nụ Cười Hoàn Hảo?</h3>
+            <p>Đặt lịch tư vấn miễn phí ngay hôm nay. Đội ngũ chuyên gia sẵn sàng tư vấn cho bạn!</p>
+            <a href="#contact" class="cta-button">Đặt Lịch Ngay</a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p><strong>☎️ Hotline:</strong> 0377243105</p>
+        <p><strong>📍 Địa chỉ:</strong> 76 trung văn, Quận Nam Từ Liệm , TP. Hà Nội</p>
+        <p><strong>⏰ Giờ làm việc:</strong> 8:00 - 20:00 (Thứ 2 - Chủ Nhật)</p>
+        <div class="footer-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Zalo</a>
+            <a href="#">Email</a>
+        </div>
+        <p style="margin-top: 30px; opacity: 0.7;">© 2025 Luxury Dental Care - Dịch vụ nha khoa cao cấp</p>
+    </footer>
+</body>
+</html>
